@@ -27,6 +27,7 @@
 #include "bus.h"
 #include "mmc_ops.h"
 #include "sd_ops.h"
+#include "pwrseq.h"
 
 /* Huaqin add for ZQL1650-43 by lanshiming at 2018/1/18 start*/
 static int IS_BOOT_TIME = 1;  
@@ -3101,6 +3102,7 @@ static int mmc_reset(struct mmc_host *host)
 	} else {
 		/* Do a brute force power cycle */
 		mmc_power_cycle(host, card->ocr);
+		mmc_pwrseq_reset(host);
 	}
 
 	/* Suspend clk scaling to avoid switching frequencies intermittently */
