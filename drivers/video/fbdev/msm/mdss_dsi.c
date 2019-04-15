@@ -4372,6 +4372,8 @@ static int mdss_dsi_ctrl_remove(struct platform_device *pdev)
 		return -ENODEV;
 	}
 
+	fb_unregister_client(&ctrl_pdata->wake_notif);
+	kthread_stop(ctrl_pdata->wake_thread);
 	mdss_dsi_pm_qos_remove_request(ctrl_pdata->shared_data);
 
 	if (msm_dss_config_vreg(&pdev->dev,
