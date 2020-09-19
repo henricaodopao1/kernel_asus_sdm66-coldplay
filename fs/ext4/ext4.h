@@ -1079,8 +1079,8 @@ struct ext4_inode_info {
 #define EXT4_MOUNT_GRPQUOTA		0x100000 /* "old" group quota, enable
 						  * enforcement for hidden quota
 						  * files */
-#define EXT4_MOUNT_PRJQUOTA		0x200000 /* Enable project quota
-						  * enforcement */
+#define EXT4_MOUNT_PRJQUOTA		0x200000 /* Enable project quota						  * enforcement */
+#define EXT4_MOUNT_NO_SEHASH_XATTR	0x40000 /* Ignore security.sehash extended attribute */
 #define EXT4_MOUNT_DIOREAD_NOLOCK	0x400000 /* Enable support for dio read nolocking */
 #define EXT4_MOUNT_JOURNAL_CHECKSUM	0x800000 /* Journal checksums */
 #define EXT4_MOUNT_JOURNAL_ASYNC_COMMIT	0x1000000 /* Journal Async Commit */
