@@ -14,7 +14,7 @@
 #include <linux/dynamic_debug.h>
 #include <asm/byteorder.h>
 #include <uapi/linux/kernel.h>
-#include <linux/asusdebug.h>
+
 enum {
 	ARA_LCD_AUO = 0,
 	ARA_LCD_AUO_2
