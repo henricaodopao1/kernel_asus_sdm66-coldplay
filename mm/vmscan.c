@@ -3789,8 +3789,6 @@ static int __init kswapd_init(void)
  		kswapd_run(nid);
 	if (kswapd_cpu_mask == NULL)
 		hotcpu_notifier(cpu_callback, 0);
-	proc_create("rd", S_IRWXUGO, NULL, &proc_rd_ops);
-	routine_init();
 	return 0;
 }
 
