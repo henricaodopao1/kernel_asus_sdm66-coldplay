@@ -173,7 +173,7 @@ unsigned char FT8716U_TestItem_KEYShortTest(bool* bTestResult);
 * Return: Test Result, PASS or FAIL
 ***********************************************************************/
 
-boolean FT8716_StartTest()
+boolean FT8716_StartTest(void)
 {
     bool bTestResult = true, bTempResult = 1;
     unsigned char ReCode;
