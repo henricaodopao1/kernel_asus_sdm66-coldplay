@@ -172,17 +172,6 @@
 			qcom,supported-sizes = <6>, <9>;
 			qcom,ramp-index = <2>;
 			#pwm-cells = <2>;
-			qcom,period = <6000000>;
-
-			qcom,lpg {
-				label = "lpg";
-				cell-index = <0>;
-				qcom,duty-percents =
-					<0x01 0x0a 0x14 0x1e 0x28 0x32 0x3c
-					0x46 0x50 0x5a 0x64
-					0x64 0x5a 0x50 0x46 0x3c 0x32 0x28 0x1e
-					0x14 0x0a 0x01>;
-			};
 		};
 
 		pm660l_pwm_4: pwm@b400 {
@@ -214,14 +203,14 @@
 				qcom,default-state = "off";
 				linux,name = "red";
 //ASUS_BSP Peter: Disable breath function +++
-/*
 				qcom,start-idx = <0>;
-				qcom,idx-len = <22>;
-				qcom,duty-pcts =
-					[01 0a 14 1e 28 32 3c 46 50 5a 64
-					64 5a 50 46 3c 32 28 1e 14 0a 01];
+				qcom,idx-len = <2>;
+				qcom,duty-pcts = [00 22];
+				qcom,lut-flags = <19>;
+				qcom,pause-lo = <3400>;
+				qcom,ramp-step-ms = <300>;
 				qcom,use-blink;
-*/
+
 //ASUS_BSP Peter: Disable breath function ---
 			};
 
@@ -234,6 +223,13 @@
 				qcom,max-current = <12>;
 				qcom,default-state = "off";
 				linux,name = "green";
+				qcom,start-idx = <0>;
+				qcom,idx-len = <2>;
+				qcom,lut-flags = <19>;
+				qcom,pause-lo = <1400>;
+				qcom,ramp-step-ms = <300>;
+				qcom,duty-pcts = [00 40];
+				qcom,use-blink;
 			};
 
 //ASUS_BSP Peter: Disable blue led because we do not have it in HW design +++
