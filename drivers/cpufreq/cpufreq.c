@@ -2220,6 +2220,7 @@ static int cpufreq_set_policy(struct cpufreq_policy *policy,
 	struct cpufreq_governor *old_gov;
 	int ret;
 
+
 	pr_debug("setting new policy for CPU %u: %u - %u kHz\n",
 		 new_policy->cpu, new_policy->min, new_policy->max);
 
