@@ -28,6 +28,7 @@ enum FP_MODE{
 #define GF_NAV_INPUT_CLICK		FP_KEY_CLICK
 #define GF_NAV_INPUT_DOUBLE_CLICK	FP_KEY_DOUBLE_CLICK
 #define GF_NAV_INPUT_LONG_PRESS		FP_KEY_LONG_PRESS
+#define GF_NAV_INPUT_HEAVY		KEY_CHAT
 /* Huaqin add define for fingerprint nav-keycode by leiyu at 2018/04/12 end */
 
 #define GF_KEY_INPUT_HOME			KEY_HOME
